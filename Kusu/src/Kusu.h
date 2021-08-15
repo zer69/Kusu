@@ -4,7 +4,8 @@
 
 
 #include "Kusu/Application.h"
+#include "Kusu/Log.h"
 
-//----Entry Point----------------
+//----Entry Point----
 #include "Kusu/EntryPoint.h"
-//-------------------------------
+//-------------------

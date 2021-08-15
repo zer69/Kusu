@@ -27,9 +27,15 @@
     <ClInclude Include="src\Kusu\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kusu\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kusu\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Kusu\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
