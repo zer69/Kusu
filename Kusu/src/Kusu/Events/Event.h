@@ -1,5 +1,7 @@
 #pragma once
 
+#include "kspch.h"
+
 #include "Kusu/Core.h"
 
 namespace Kusu
