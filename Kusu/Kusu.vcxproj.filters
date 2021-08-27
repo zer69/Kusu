@@ -35,6 +35,8 @@
       <Filter>Kusu</Filter>
     </ClInclude>
     <ClInclude Include="src\kspch.h" />
+    <ClInclude Include="src\Kusu\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kusu\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Kusu</Filter>
     </ClCompile>
     <ClCompile Include="src\kspch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
