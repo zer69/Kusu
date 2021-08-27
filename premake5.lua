@@ -64,14 +64,17 @@ workspace "Kusu"
 
     filter "configurations:Debug"
       defines "KS_DEBUG"
+      buildoptions "/MDd"
       symbols "On"
 
     filter "configurations:Release"
-      defines "KS_Release"
+      defines "KS_RELEASE"
+      buildoptions "/MD"
       optimize "On"
 
     filter "configurations:Dist"
       defines "KS_DIST"
+      buildoptions "/MD"
       optimize "On"
 
   project "Sandbox"
@@ -99,6 +102,11 @@ workspace "Kusu"
       "Kusu"
     }
 
+    filter "system:windows"
+		  cppdialect "C++17"
+		   staticruntime "On"
+		   systemversion "latest"
+
     defines
     {
       "KS_PLATFORM_WINDOWS",
@@ -106,12 +114,15 @@ workspace "Kusu"
 
     filter "configurations:Debug"
       defines "KS_DEBUG"
+      buildoptions "/MDd"
       symbols "On"
 
     filter "configurations:Release"
-      defines "KS_Release"
+      defines "KS_RELEASE"
+      buildoptions "/MD"
       optimize "On"
 
     filter "configurations:Dist"
       defines "KS_DIST"
+      buildoptions "/MD"
       optimize "On"
