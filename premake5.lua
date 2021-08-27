@@ -18,6 +18,9 @@ workspace "Kusu"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "kspch.h"
+    pchsource "Kusu/src/kspch.cpp"
+
     files
     {
       "%{prj.name}/src/**.h",
@@ -26,6 +29,7 @@ workspace "Kusu"
 
     includedirs
     {
+      "%{prj.name}/src",
       "%{prj.name}/vendor/spdlog/include"
     }
 

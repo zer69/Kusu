@@ -4,6 +4,9 @@
     <Filter Include="Kusu">
       <UniqueIdentifier>{ED30887C-D967-890D-8254-6F106E6A050F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kusu\Events">
+      <UniqueIdentifier>{31F0D9EF-9DA5-52E5-269A-4CBC924E49E9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kusu.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Kusu\EntryPoint.h">
       <Filter>Kusu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kusu\Events\ApplicationEvent.h">
+      <Filter>Kusu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kusu\Events\Event.h">
+      <Filter>Kusu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kusu\Events\KeyEvent.h">
+      <Filter>Kusu\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kusu\Events\MouseEvent.h">
+      <Filter>Kusu\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Kusu\Log.h">
       <Filter>Kusu</Filter>
     </ClInclude>
+    <ClInclude Include="src\kspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kusu\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Kusu\Log.cpp">
       <Filter>Kusu</Filter>
     </ClCompile>
+    <ClCompile Include="src\kspch.cpp" />
   </ItemGroup>
 </Project>
