@@ -13,8 +13,10 @@ workspace "Kusu"
   -- Include directories relative to root folder (solution directory)
   IncludeDir = {}
   IncludeDir["GLFW"] = "Kusu/vendor/GLFW/include"
+  IncludeDir["Glad"] = "Kusu/vendor/Glad/include"
 
   include "Kusu/vendor/GLFW"
+  include "Kusu/vendor/GLAD"
 
   project "Kusu"
     location "Kusu"
@@ -37,12 +39,14 @@ workspace "Kusu"
     {
       "%{prj.name}/src",
       "%{prj.name}/vendor/spdlog/include",
-		  "%{IncludeDir.GLFW}"
+      "%{IncludeDir.GLFW}",
+		  "%{IncludeDir.Glad}"
 	  }
 
 	  links
 	  {
 		"GLFW",
+    "Glad",
 		"opengl32.lib"
     }
 
@@ -55,6 +59,7 @@ workspace "Kusu"
       {
         "KS_PLATFORM_WINDOWS",
         "KS_BUILD_DLL",
+			  "GLFW_INCLUDE_NONE"
       }
 
       postbuildcommands

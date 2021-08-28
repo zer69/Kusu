@@ -5,6 +5,8 @@
 #include "Kusu/Events/MouseEvent.h"
 #include "Kusu/Events/KeyEvent.h"
 
+#include <GLAD/glad.h>
+
 namespace Kusu 
 {
 
@@ -43,13 +45,15 @@ namespace Kusu
 		{
 			// TODO: glfwTerminate on system shutdown
 			int success = glfwInit();
-			KS_CORE_ASSERT(success, "GLFW intialization: failed");
+			KS_CORE_ASSERT(success, "GLFW initialization: failed");
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		KS_CORE_ASSERT(status, "Glad initialization: failed");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

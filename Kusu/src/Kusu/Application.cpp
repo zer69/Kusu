@@ -3,7 +3,7 @@
 
 #include "Kusu/Log.h"
 
-#include <GLFW/glfw3.h>
+#include <GLAD/glad.h>
 
 namespace Kusu 
 {
