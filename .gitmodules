@@ -4,3 +4,6 @@
 [submodule "Kusu/vendor/GLFW"]
 	path = Kusu/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Kusu/vendor/imgui"]
+	path = Kusu/vendor/imgui
+	url = https://github.com/TheCherno/imgui

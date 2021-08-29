@@ -7,6 +7,9 @@
 #include "Kusu/Layer.h"
 #include "Kusu/Log.h"
 
+
+#include "Kusu/ImGui/ImGuiLayer.h"
+
 //----Entry Point----
 #include "Kusu/EntryPoint.h"
 //-------------------
