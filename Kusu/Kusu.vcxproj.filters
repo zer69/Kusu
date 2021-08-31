@@ -7,8 +7,14 @@
     <Filter Include="Kusu\Events">
       <UniqueIdentifier>{31F0D9EF-9DA5-52E5-269A-4CBC924E49E9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kusu\ImGui">
+      <UniqueIdentifier>{D7E39E64-C39B-E0B1-2CA3-B90D187A7BA2}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Kusu\Events\MouseEvent.h">
       <Filter>Kusu\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kusu\ImGui\ImGuiLayer.h">
+      <Filter>Kusu\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Kusu\Layer.h">
       <Filter>Kusu</Filter>
     </ClInclude>
@@ -49,16 +58,20 @@
     <ClInclude Include="src\Kusu\Window.h">
       <Filter>Kusu</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\kspch.h" />
-    <ClInclude Include="src\Kusu\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kusu\Application.cpp">
       <Filter>Kusu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Kusu\ImGui\ImGuiLayer.cpp">
+      <Filter>Kusu\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Kusu\Layer.cpp">
       <Filter>Kusu</Filter>
@@ -69,11 +82,12 @@
     <ClCompile Include="src\Kusu\Log.cpp">
       <Filter>Kusu</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\kspch.cpp" />
-    <ClCompile Include="src\Kusu\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

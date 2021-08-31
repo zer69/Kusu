@@ -20,10 +20,13 @@ workspace "Kusu"
   include "Kusu/vendor/GLAD"
   include "Kusu/vendor/imgui"
 
+
+
   project "Kusu"
     location "Kusu"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +59,6 @@ workspace "Kusu"
 
     filter "system:windows"
       cppdialect "C++17"
-      staticruntime "On"
       systemversion "latest"
 
       defines
@@ -73,23 +75,24 @@ workspace "Kusu"
 
     filter "configurations:Debug"
       defines "KS_DEBUG"
-      buildoptions "/MDd"
+      runtime "Debug"
       symbols "On"
 
     filter "configurations:Release"
       defines "KS_RELEASE"
-      buildoptions "/MD"
+      runtime "Release"
       optimize "On"
 
     filter "configurations:Dist"
       defines "KS_DIST"
-      buildoptions "/MD"
+      runtime "Release"
       optimize "On"
 
   project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -113,7 +116,6 @@ workspace "Kusu"
 
     filter "system:windows"
 		  cppdialect "C++17"
-		   staticruntime "On"
 		   systemversion "latest"
 
     defines
@@ -123,15 +125,15 @@ workspace "Kusu"
 
     filter "configurations:Debug"
       defines "KS_DEBUG"
-      buildoptions "/MDd"
+      runtime "Debug"
       symbols "On"
 
     filter "configurations:Release"
       defines "KS_RELEASE"
-      buildoptions "/MD"
+      runtime "Release"
       optimize "On"
 
     filter "configurations:Dist"
       defines "KS_DIST"
-      buildoptions "/MD"
+      runtime "Release"
       optimize "On"

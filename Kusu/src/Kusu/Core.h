@@ -10,6 +10,10 @@
 	#error Kusu only supports Windows!
 #endif
 
+#ifdef KS_DEBUG
+	#define KS_ENABLE_ASSERTS
+#endif
+
 #ifdef KS_ENABLE_ASSERTS
 	#define KS_ASSERT(x, ...) { if(!(x)) { KS_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define KS_CORE_ASSERT(x, ...) { if(!(x)) { KS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
